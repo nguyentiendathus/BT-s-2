@@ -102,7 +102,7 @@ public class All_Students extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       Admin_Frame a = new Admin_Frame();
+       Admin_Screen a = new Admin_Screen();
        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 

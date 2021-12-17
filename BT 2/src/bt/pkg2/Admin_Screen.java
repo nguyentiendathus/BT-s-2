@@ -2,9 +2,9 @@ package bt.pkg2;
 
 import javax.swing.JFrame;
 
-public class Admin_Frame extends javax.swing.JFrame {
+public class Admin_Screen extends javax.swing.JFrame {
 
-    public Admin_Frame() {
+    public Admin_Screen() {
         initComponents();
         this.setVisible(true);
         this.setTitle("Admin");
@@ -21,7 +21,7 @@ public class Admin_Frame extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        all_Lecture_Button = new javax.swing.JButton();
+        all_Lecturer_Button = new javax.swing.JButton();
         back_Login_Button = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -35,7 +35,6 @@ public class Admin_Frame extends javax.swing.JFrame {
         new_User_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 470));
 
         jPanel1.setBackground(new java.awt.Color(250, 250, 250));
         jPanel1.setMaximumSize(new java.awt.Dimension(600, 450));
@@ -67,13 +66,13 @@ public class Admin_Frame extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 70));
 
-        all_Lecture_Button.setBackground(new java.awt.Color(250, 250, 250));
-        all_Lecture_Button.setIcon(new javax.swing.ImageIcon("C:\\Users\\HI\\Documents\\NetBeansProjects\\BT-s-2\\BT 2\\src\\Images and jar file\\Leturer.png")); // NOI18N
-        all_Lecture_Button.setToolTipText("");
-        all_Lecture_Button.setPreferredSize(new java.awt.Dimension(70, 23));
-        all_Lecture_Button.addActionListener(new java.awt.event.ActionListener() {
+        all_Lecturer_Button.setBackground(new java.awt.Color(250, 250, 250));
+        all_Lecturer_Button.setIcon(new javax.swing.ImageIcon("C:\\Users\\HI\\Documents\\NetBeansProjects\\BT-s-2\\BT 2\\src\\Images and jar file\\Leturer.png")); // NOI18N
+        all_Lecturer_Button.setToolTipText("");
+        all_Lecturer_Button.setPreferredSize(new java.awt.Dimension(70, 23));
+        all_Lecturer_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                all_Lecture_ButtonActionPerformed(evt);
+                all_Lecturer_ButtonActionPerformed(evt);
             }
         });
 
@@ -178,7 +177,7 @@ public class Admin_Frame extends javax.swing.JFrame {
                                 .addComponent(jLabel1))
                             .addGroup(jPanel3Layout.createSequentialGroup()
                                 .addGap(9, 9, 9)
-                                .addComponent(all_Lecture_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(all_Lecturer_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(58, 58, 58))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(111, 111, 111)
@@ -194,7 +193,7 @@ public class Admin_Frame extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(28, 28, 28)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(all_Lecture_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(all_Lecturer_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(new_User_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(all_Student_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
@@ -251,14 +250,14 @@ public class Admin_Frame extends javax.swing.JFrame {
     }//GEN-LAST:event_new_User_ButtonActionPerformed
 
     private void back_Login_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_back_Login_ButtonActionPerformed
-        LogIn a = new LogIn();
+        Admin_Login a = new Admin_Login();
         this.dispose();
     }//GEN-LAST:event_back_Login_ButtonActionPerformed
 
-    private void all_Lecture_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_all_Lecture_ButtonActionPerformed
+    private void all_Lecturer_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_all_Lecturer_ButtonActionPerformed
         All_Lecturers a = new All_Lecturers();
         this.dispose();
-    }//GEN-LAST:event_all_Lecture_ButtonActionPerformed
+    }//GEN-LAST:event_all_Lecturer_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -277,26 +276,27 @@ public class Admin_Frame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Admin_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Screen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Admin_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Screen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Admin_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Screen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Admin_Frame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Screen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Admin_Frame().setVisible(true);
+                new Admin_Screen().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton all_Lecture_Button;
+    private javax.swing.JButton all_Lecturer_Button;
     private javax.swing.JButton all_Student_Button;
     private javax.swing.JButton back_Login_Button;
     private javax.swing.JButton jButton5;

@@ -234,7 +234,7 @@ public class NewUser extends javax.swing.JFrame {
     }//GEN-LAST:event_create_newUser_ButtonActionPerformed
 
     private void createButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createButton2ActionPerformed
-        Admin_Frame a = new Admin_Frame();
+        Admin_Screen a = new Admin_Screen();
         this.dispose();
     }//GEN-LAST:event_createButton2ActionPerformed
 
