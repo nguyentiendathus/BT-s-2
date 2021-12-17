@@ -62,6 +62,8 @@ public class StudentScreen extends javax.swing.JFrame {
 
         jPanel2.add(spacePanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 40));
 
+        jPanel5.setBackground(new java.awt.Color(250, 250, 250));
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(

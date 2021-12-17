@@ -1,15 +1,25 @@
-
 package bt.pkg2;
 
+import java.awt.HeadlessException;
 import javax.swing.JFrame;
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import javax.swing.JOptionPane;
 
 public class LogIn extends javax.swing.JFrame {
+    
+    Connection connection = null;
+    Statement stm = null;
+    ResultSet res = null;
 
 
     public LogIn() {
         initComponents();
+        connection = Database.connection();
         this.setVisible(true);
-        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setResizable(false);
         this.pack();
         this.setVisible(true);
@@ -63,6 +73,7 @@ public class LogIn extends javax.swing.JFrame {
 
         jPanel2.setBackground(new java.awt.Color(220, 218, 232));
 
+        checkPassword.setBackground(new java.awt.Color(220, 218, 232));
         checkPassword.setFont(new java.awt.Font("UD Digi Kyokasho N-R", 0, 14)); // NOI18N
         checkPassword.setText("Check Password");
         checkPassword.setMaximumSize(new java.awt.Dimension(40, 40));
@@ -73,7 +84,7 @@ public class LogIn extends javax.swing.JFrame {
         });
 
         userNameField.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        userNameField.setText("Enter your username or email");
+        userNameField.setText("Enter your ID");
         userNameField.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 userNameFieldMouseClicked(evt);
@@ -168,10 +179,28 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_userNameFieldActionPerformed
 
     private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
-        // TODO add your handling code here:
-        Admin a = new Admin();
-        this.dispose();
-        System.out.println("entered");
+
+        try{
+            
+            stm = connection.createStatement();
+            String userName = userNameField.getText();
+            String userPass = new String(passwordField.getPassword());
+            
+            String sql = "SELECT * FROM admin WHERE Email ='"+ userName+"' && Password = '"+userPass+"'";
+            
+            res = stm.executeQuery(sql);
+            if(res.next()){
+                setVisible(false);
+                Admin_Frame object = new Admin_Frame();
+                object.setVisible(true);
+            }else{
+                JOptionPane.showMessageDialog(null,"Password or ID is invalid");
+            }
+        }catch(HeadlessException | SQLException e){
+            JOptionPane.showMessageDialog(null,e);
+        }
+
+
     }//GEN-LAST:event_loginButtonActionPerformed
 
     private void checkPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_checkPasswordActionPerformed
