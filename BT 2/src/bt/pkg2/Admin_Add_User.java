@@ -8,12 +8,12 @@ import java.sql.Statement;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-public class NewUser extends javax.swing.JFrame {
+public class Admin_Add_User extends javax.swing.JFrame {
     Connection connection = null;
     Statement stm = null;
     ResultSet res = null;
 
-    public NewUser() {
+    public Admin_Add_User() {
         initComponents();
         connection = Database.connection();
         this.setVisible(true);
@@ -78,7 +78,7 @@ public class NewUser extends javax.swing.JFrame {
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         new_Fullname_Field.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        new_Fullname_Field.setText("Enter your full name");
+        new_Fullname_Field.setText("Enter full name");
         new_Fullname_Field.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 new_Fullname_FieldMouseClicked(evt);
@@ -92,7 +92,7 @@ public class NewUser extends javax.swing.JFrame {
         jPanel4.add(new_Fullname_Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 130, 350, 30));
 
         new_Phone_Field.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        new_Phone_Field.setText("Enter your phone number");
+        new_Phone_Field.setText("Enter phone number");
         new_Phone_Field.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 new_Phone_FieldMouseClicked(evt);
@@ -106,7 +106,7 @@ public class NewUser extends javax.swing.JFrame {
         jPanel4.add(new_Phone_Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 170, 350, 30));
 
         new_department_Field.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        new_department_Field.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Student", "Lecturer" }));
+        new_department_Field.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Student", "Lecturer" }));
         jPanel4.add(new_department_Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 350, -1));
 
         nameLabel2.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 20)); // NOI18N
@@ -148,7 +148,7 @@ public class NewUser extends javax.swing.JFrame {
         jPanel4.add(nameLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 130, 103, 30));
 
         new_User_Field.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        new_User_Field.setText("Enter your ID");
+        new_User_Field.setText("Enter ID");
         new_User_Field.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 new_User_FieldMouseClicked(evt);
@@ -217,12 +217,12 @@ public class NewUser extends javax.swing.JFrame {
             
             // Up dữ liệu lên mySQL
             if(newDepartment == "Student"){
-                String sql = "INSERT INTO student(ID, Student_Password, FullName,Class, PhoneNumber) VALUES('"+newUserID+"','"+newUserPass+"','"+newFullName+"','"+newClass+"','"+newPhone+"')";
+                String sql = "INSERT INTO student(ID, Password, Full_name, Class, Phone_number) VALUES('"+newUserID+"','"+newUserPass+"','"+newFullName+"','"+newClass+"','"+newPhone+"')";
                 JOptionPane.showMessageDialog(null,"Created student successfully");
             
                 stm.executeUpdate(sql);
             }else if(newDepartment == "Lecturer"){
-                String sql = "INSERT INTO lecturers(ID,Lecturer_password, Full_Name, Technical, Phone_number) VALUES('"+newUserID+"','"+newUserPass+"','"+newFullName+"','"+newTechnical+"','"+newPhone+"')";
+                String sql = "INSERT INTO lecturers(ID, Password, Full_name, Technical, Phone_number) VALUES('"+newUserID+"','"+newUserPass+"','"+newFullName+"','"+newTechnical+"','"+newPhone+"')";
                 JOptionPane.showMessageDialog(null,"Created lecturer successfully");
             
                 stm.executeUpdate(sql);
@@ -284,21 +284,23 @@ public class NewUser extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NewUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Add_User.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NewUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Add_User.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NewUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Add_User.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NewUser.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(Admin_Add_User.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NewUser().setVisible(true);
+                new Admin_Add_User().setVisible(true);
             }
         });
     }

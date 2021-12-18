@@ -93,7 +93,7 @@ public class Admin_Screen extends javax.swing.JFrame {
         jLabel6.setText("Course");
 
         jLabel5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel5.setText("IDK");
+        jLabel5.setText("Search & Delete");
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel4.setText("Add Users");
@@ -154,7 +154,11 @@ public class Admin_Screen extends javax.swing.JFrame {
                         .addComponent(new_User_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel5))
+                            .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -180,11 +184,9 @@ public class Admin_Screen extends javax.swing.JFrame {
                                 .addComponent(all_Lecturer_Button, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(58, 58, 58))
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(111, 111, 111)
-                .addComponent(jLabel5)
-                .addGap(143, 143, 143)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(141, 141, 141)
                 .addComponent(jLabel3)
                 .addGap(86, 86, 86))
         );
@@ -232,11 +234,12 @@ public class Admin_Screen extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        // TODO add your handling code here:
+        Admin_Edit a = new Admin_Edit();
+        this.dispose();
     }//GEN-LAST:event_jButton6ActionPerformed
 
     private void all_Student_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_all_Student_ButtonActionPerformed
-       All_Students a = new All_Students();
+       Admin_All_Students a = new Admin_All_Students();
         this.dispose();
     }//GEN-LAST:event_all_Student_ButtonActionPerformed
 
@@ -245,7 +248,7 @@ public class Admin_Screen extends javax.swing.JFrame {
     }//GEN-LAST:event_new_User_ButtonMouseClicked
 
     private void new_User_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_new_User_ButtonActionPerformed
-        NewUser a = new NewUser();
+        Admin_Add_User a = new Admin_Add_User();
         this.dispose();
     }//GEN-LAST:event_new_User_ButtonActionPerformed
 
@@ -255,7 +258,7 @@ public class Admin_Screen extends javax.swing.JFrame {
     }//GEN-LAST:event_back_Login_ButtonActionPerformed
 
     private void all_Lecturer_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_all_Lecturer_ButtonActionPerformed
-        All_Lecturers a = new All_Lecturers();
+        Admin_All_Lecturers a = new Admin_All_Lecturers();
         this.dispose();
     }//GEN-LAST:event_all_Lecturer_ButtonActionPerformed
 

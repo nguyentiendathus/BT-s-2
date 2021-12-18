@@ -117,7 +117,7 @@ public class Welcome_Frame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void login_Lecturer_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_login_Lecturer_ButtonActionPerformed
-        All_Lecturers a = new All_Lecturers();
+        Admin_All_Lecturers a = new Admin_All_Lecturers();
         this.dispose();
     }//GEN-LAST:event_login_Lecturer_ButtonActionPerformed
 

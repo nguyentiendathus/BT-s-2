@@ -147,15 +147,16 @@ public class Student_Login extends javax.swing.JFrame {
             String userPass = new String(passwordField.getPassword());
          
            
-            String sql = "SELECT * FROM student WHERE ID ='"+ userName+"' && Student_Password = '"+userPass+"'";
+            String sql = "SELECT * FROM student WHERE ID ='"+ userName+"' && Password = '"+userPass+"'";
             
             res = stm.executeQuery(sql);      
            
             if(res.next()){
                 setVisible(false);
-                StudentScreen stu = new StudentScreen();
+                Student_Screen stu = new Student_Screen();
                 stu.setVisible(true);
             }
+            
             else{
                 JOptionPane.showMessageDialog(null,"Password or ID is invalid");
             }

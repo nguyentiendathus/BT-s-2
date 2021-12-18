@@ -36,9 +36,8 @@ public class Admin_Login extends javax.swing.JFrame {
         passwordField = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        forgotPasswordButton = new javax.swing.JButton();
         back_Welcome_Button = new javax.swing.JButton();
-        loginButton1 = new javax.swing.JButton();
+        admin_Login_Button = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(600, 400));
@@ -119,11 +118,6 @@ public class Admin_Login extends javax.swing.JFrame {
         jLabel3.setText("Password");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 97, 111, -1));
 
-        forgotPasswordButton.setBackground(new java.awt.Color(250, 250, 250));
-        forgotPasswordButton.setFont(new java.awt.Font("Windsor", 0, 14)); // NOI18N
-        forgotPasswordButton.setText("Forgot password");
-        jPanel2.add(forgotPasswordButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 190, -1, 40));
-
         back_Welcome_Button.setBackground(new java.awt.Color(250, 250, 250));
         back_Welcome_Button.setFont(new java.awt.Font("Windsor", 0, 14)); // NOI18N
         back_Welcome_Button.setText("Back");
@@ -132,17 +126,17 @@ public class Admin_Login extends javax.swing.JFrame {
                 back_Welcome_ButtonActionPerformed(evt);
             }
         });
-        jPanel2.add(back_Welcome_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 190, 88, 40));
+        jPanel2.add(back_Welcome_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 190, 88, 40));
 
-        loginButton1.setBackground(new java.awt.Color(250, 250, 250));
-        loginButton1.setFont(new java.awt.Font("Windsor", 0, 14)); // NOI18N
-        loginButton1.setText("Login");
-        loginButton1.addActionListener(new java.awt.event.ActionListener() {
+        admin_Login_Button.setBackground(new java.awt.Color(250, 250, 250));
+        admin_Login_Button.setFont(new java.awt.Font("Windsor", 0, 14)); // NOI18N
+        admin_Login_Button.setText("Login");
+        admin_Login_Button.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButton1ActionPerformed(evt);
+                admin_Login_ButtonActionPerformed(evt);
             }
         });
-        jPanel2.add(loginButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 190, 88, 40));
+        jPanel2.add(admin_Login_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 190, 88, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 91, 590, 280));
 
@@ -179,14 +173,14 @@ public class Admin_Login extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_passwordFieldActionPerformed
 
-    private void loginButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButton1ActionPerformed
+    private void admin_Login_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_admin_Login_ButtonActionPerformed
         try{
             
             stm = connection.createStatement();
             String userName = userNameField.getText();
             String userPass = new String(passwordField.getPassword());
          
-           
+       
             String sql = "SELECT * FROM admin WHERE Email ='"+ userName+"' && Password = '"+userPass+"'";
             
             res = stm.executeQuery(sql);      
@@ -202,8 +196,9 @@ public class Admin_Login extends javax.swing.JFrame {
         }catch(HeadlessException | SQLException e){
             JOptionPane.showMessageDialog(null,e);
         }
+  
 
-    }//GEN-LAST:event_loginButton1ActionPerformed
+    }//GEN-LAST:event_admin_Login_ButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -242,15 +237,14 @@ public class Admin_Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton admin_Login_Button;
     private javax.swing.JButton back_Welcome_Button;
     private javax.swing.JCheckBox checkPassword;
-    private javax.swing.JButton forgotPasswordButton;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JButton loginButton1;
     private javax.swing.JPasswordField passwordField;
     private javax.swing.JTextField userNameField;
     // End of variables declaration//GEN-END:variables
