@@ -30,7 +30,7 @@ public class Admin_Edit extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(185, 215, 240));
+        jPanel2.setBackground(new java.awt.Color(115, 136, 193));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton1.setBackground(new java.awt.Color(185, 215, 240));
@@ -46,6 +46,7 @@ public class Admin_Edit extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 470, 60));
 
+        jPanel3.setBackground(new java.awt.Color(220, 218, 232));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         edit_Lecturer.setBackground(new java.awt.Color(250, 250, 250));

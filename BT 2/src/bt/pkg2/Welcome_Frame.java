@@ -27,14 +27,12 @@ public class Welcome_Frame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         login_Student_Button = new javax.swing.JButton();
         login_Admin_Button = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(600, 400));
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(185, 215, 240));
+        jPanel2.setBackground(new java.awt.Color(115, 136, 193));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setFont(new java.awt.Font("UVN Banh Mi", 0, 60)); // NOI18N
@@ -44,6 +42,7 @@ public class Welcome_Frame extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 100));
 
+        jPanel3.setBackground(new java.awt.Color(220, 218, 232));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         login_Lecturer_Button.setBackground(new java.awt.Color(250, 250, 250));
@@ -55,19 +54,19 @@ public class Welcome_Frame extends javax.swing.JFrame {
                 login_Lecturer_ButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(login_Lecturer_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 120, 120, 120));
+        jPanel3.add(login_Lecturer_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, 120, 120));
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel4.setFont(new java.awt.Font(".VnArial", 0, 18)); // NOI18N
         jLabel4.setText("Administrator");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 260, -1, -1));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, 120, 30));
 
-        jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel2.setFont(new java.awt.Font(".VnArial", 0, 18)); // NOI18N
         jLabel2.setText("Student");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, -1, -1));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 230, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font(".VnArial", 0, 18)); // NOI18N
         jLabel1.setText("Lecturer");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 260, -1, -1));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 230, -1, -1));
 
         login_Student_Button.setBackground(new java.awt.Color(250, 250, 250));
         login_Student_Button.setIcon(new javax.swing.ImageIcon("C:\\Users\\HI\\Documents\\NetBeansProjects\\BT-s-2\\BT 2\\src\\Images and jar file\\Student1.png")); // NOI18N
@@ -77,7 +76,7 @@ public class Welcome_Frame extends javax.swing.JFrame {
                 login_Student_ButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(login_Student_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 120, 120, 120));
+        jPanel3.add(login_Student_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 90, 120, 120));
 
         login_Admin_Button.setBackground(new java.awt.Color(250, 250, 250));
         login_Admin_Button.setIcon(new javax.swing.ImageIcon("C:\\Users\\HI\\Documents\\NetBeansProjects\\BT-s-2\\BT 2\\src\\Images and jar file\\Administrator.jpg")); // NOI18N
@@ -92,13 +91,7 @@ public class Welcome_Frame extends javax.swing.JFrame {
                 login_Admin_ButtonActionPerformed(evt);
             }
         });
-        jPanel3.add(login_Admin_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 120, 120, 120));
-
-        jLabel7.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel7.setFont(new java.awt.Font("UVN Bay Buom", 0, 36)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel7.setText("Who you are?");
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 240, -1));
+        jPanel3.add(login_Admin_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 90, 120, 120));
 
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 70, 600, 330));
 
@@ -117,7 +110,7 @@ public class Welcome_Frame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void login_Lecturer_ButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_login_Lecturer_ButtonActionPerformed
-        Admin_All_Lecturers a = new Admin_All_Lecturers();
+        Lecturer_Login a = new Lecturer_Login();
         this.dispose();
     }//GEN-LAST:event_login_Lecturer_ButtonActionPerformed
 
@@ -175,7 +168,6 @@ public class Welcome_Frame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

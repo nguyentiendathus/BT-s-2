@@ -49,7 +49,8 @@ public class Admin_Add_User extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(185, 215, 240));
+        jPanel2.setBackground(new java.awt.Color(115, 136, 193));
+        jPanel2.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel2.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(240, 240, 240));
@@ -74,7 +75,7 @@ public class Admin_Add_User extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, -1));
 
-        jPanel4.setBackground(new java.awt.Color(204, 250, 210));
+        jPanel4.setBackground(new java.awt.Color(220, 218, 232));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         new_Fullname_Field.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -169,7 +170,7 @@ public class Admin_Add_User extends javax.swing.JFrame {
         });
         jPanel4.add(new_PassWord_Field, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 350, 30));
 
-        checkPassword.setBackground(new java.awt.Color(204, 250, 210));
+        checkPassword.setBackground(new java.awt.Color(220, 218, 232));
         checkPassword.setFont(new java.awt.Font("UD Digi Kyokasho N-R", 0, 14)); // NOI18N
         checkPassword.setText("Check Password");
         checkPassword.setMaximumSize(new java.awt.Dimension(40, 40));
@@ -197,7 +198,7 @@ public class Admin_Add_User extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void new_Fullname_FieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_new_Fullname_FieldActionPerformed
-        // TODO add your handling code here:
+       this.new_Fullname_Field.setText("");
     }//GEN-LAST:event_new_Fullname_FieldActionPerformed
 
     private void new_Phone_FieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_new_Phone_FieldActionPerformed
@@ -217,12 +218,12 @@ public class Admin_Add_User extends javax.swing.JFrame {
             
             // Up dữ liệu lên mySQL
             if(newDepartment == "Student"){
-                String sql = "INSERT INTO student(ID, Password, Full_name, Class, Phone_number) VALUES('"+newUserID+"','"+newUserPass+"','"+newFullName+"','"+newClass+"','"+newPhone+"')";
+                String sql = "INSERT INTO student(ID, Student_Password, Full_name, Class, Phone_number) VALUES('"+newUserID+"','"+newUserPass+"','"+newFullName+"','"+newClass+"','"+newPhone+"')";
                 JOptionPane.showMessageDialog(null,"Created student successfully");
             
                 stm.executeUpdate(sql);
             }else if(newDepartment == "Lecturer"){
-                String sql = "INSERT INTO lecturers(ID, Password, Full_name, Technical, Phone_number) VALUES('"+newUserID+"','"+newUserPass+"','"+newFullName+"','"+newTechnical+"','"+newPhone+"')";
+                String sql = "INSERT INTO lecturers(ID, Lecturer_Password, Full_name,Phone_number, Technical) VALUES('"+newUserID+"','"+newUserPass+"','"+newFullName+"','"+newPhone+"','"+newTechnical+"')";
                 JOptionPane.showMessageDialog(null,"Created lecturer successfully");
             
                 stm.executeUpdate(sql);
@@ -249,7 +250,7 @@ public class Admin_Add_User extends javax.swing.JFrame {
     private void new_User_FieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_new_User_FieldMouseClicked
         this.new_User_Field.setText("");
     }//GEN-LAST:event_new_User_FieldMouseClicked
-
+                                  
     private void new_User_FieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_new_User_FieldActionPerformed
   
     }//GEN-LAST:event_new_User_FieldActionPerformed

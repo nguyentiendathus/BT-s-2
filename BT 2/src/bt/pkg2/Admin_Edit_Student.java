@@ -44,16 +44,12 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
         delete_Button = new javax.swing.JButton();
         user_ID = new javax.swing.JTextField();
         user_Password = new javax.swing.JTextField();
-        user_Department1 = new javax.swing.JTextField();
-        departLabel1 = new javax.swing.JLabel();
-        departLabel2 = new javax.swing.JLabel();
-        user_Department2 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(185, 215, 240));
+        jPanel2.setBackground(new java.awt.Color(115, 136, 193));
 
         jLabel2.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 36)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(240, 240, 240));
@@ -78,7 +74,7 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 550, -1));
 
-        jPanel4.setBackground(new java.awt.Color(204, 250, 210));
+        jPanel4.setBackground(new java.awt.Color(220, 218, 232));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         user_Fullname.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -107,23 +103,23 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
                 user_PhoneActionPerformed(evt);
             }
         });
-        jPanel4.add(user_Phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, 350, 30));
+        jPanel4.add(user_Phone, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 350, 30));
 
         nameLabel2.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 20)); // NOI18N
         nameLabel2.setText("Phone Number");
-        jPanel4.add(nameLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 220, 144, 30));
+        jPanel4.add(nameLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, 144, 30));
 
         departLabel.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 20)); // NOI18N
         departLabel.setText("Class");
-        jPanel4.add(departLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 270, -1, 20));
+        jPanel4.add(departLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, -1, 20));
 
         nameLabel.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 20)); // NOI18N
         nameLabel.setText("Password");
-        jPanel4.add(nameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 135, 30));
+        jPanel4.add(nameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 135, 30));
 
         nameLabel1.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 20)); // NOI18N
         nameLabel1.setText("UserID");
-        jPanel4.add(nameLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 76, 30));
+        jPanel4.add(nameLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 76, 30));
 
         search_Button.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         search_Button.setText("Search");
@@ -132,7 +128,7 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
                 search_ButtonActionPerformed(evt);
             }
         });
-        jPanel4.add(search_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 310, -1, 30));
+        jPanel4.add(search_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 250, -1, 30));
 
         update_Button.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         update_Button.setText("Update");
@@ -141,11 +137,11 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
                 update_ButtonActionPerformed(evt);
             }
         });
-        jPanel4.add(update_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, -1, 30));
+        jPanel4.add(update_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 250, -1, 30));
 
         nameLabel3.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 20)); // NOI18N
         nameLabel3.setText("Full name");
-        jPanel4.add(nameLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 103, 30));
+        jPanel4.add(nameLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 103, 30));
 
         user_Class.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         user_Class.setText(" ");
@@ -159,7 +155,7 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
                 user_ClassActionPerformed(evt);
             }
         });
-        jPanel4.add(user_Class, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 260, 350, 30));
+        jPanel4.add(user_Class, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 350, 30));
 
         back_Button.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         back_Button.setText("Back");
@@ -168,7 +164,7 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
                 back_ButtonActionPerformed(evt);
             }
         });
-        jPanel4.add(back_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 310, -1, 30));
+        jPanel4.add(back_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 250, -1, 30));
 
         delete_Button.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         delete_Button.setText("Delete");
@@ -177,7 +173,7 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
                 delete_ButtonActionPerformed(evt);
             }
         });
-        jPanel4.add(delete_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 310, -1, 30));
+        jPanel4.add(delete_Button, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 250, -1, 30));
 
         user_ID.setFont(new java.awt.Font("Tempus Sans ITC", 0, 14)); // NOI18N
         user_ID.setText("Enter ID");
@@ -207,43 +203,7 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
         });
         jPanel4.add(user_Password, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, 350, 30));
 
-        user_Department1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        user_Department1.setText(" ");
-        user_Department1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                user_Department1MouseClicked(evt);
-            }
-        });
-        user_Department1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                user_Department1ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(user_Department1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 140, 350, 30));
-
-        departLabel1.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 20)); // NOI18N
-        departLabel1.setText("Date of birth");
-        jPanel4.add(departLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 150, -1, 20));
-
-        departLabel2.setFont(new java.awt.Font("UD Digi Kyokasho N-B", 0, 20)); // NOI18N
-        departLabel2.setText("Adress");
-        jPanel4.add(departLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, -1, 20));
-
-        user_Department2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        user_Department2.setText(" ");
-        user_Department2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                user_Department2MouseClicked(evt);
-            }
-        });
-        user_Department2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                user_Department2ActionPerformed(evt);
-            }
-        });
-        jPanel4.add(user_Department2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 180, 350, 30));
-
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 550, 370));
+        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 60, 550, 300));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -253,7 +213,7 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -272,8 +232,10 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
              if(res.next()){
                  
                  user_Fullname.setText(res.getString("Full_name"));
-                 user_Password.setText(res.getString("Password"));
+                 user_Password.setText(res.getString("Student_Password"));
                  user_Phone.setText(res.getString("Phone_number"));
+                 user_Class.setText(res.getString("Class"));
+                 
              
              } else{
                     JOptionPane.showMessageDialog(null,"Not found");
@@ -347,10 +309,10 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
             String newClass = user_Class.getText();
             String newPhone = user_Phone.getText();
 
-            String sql = "UPDATE student SET Password = '"+newUserPass+"', Full_name = '"+newFullName+"', Class = '"+newClass+"', Phone_number = '"+newPhone+"' WHERE ID = '"+newUserID+"'";
+            String sql = "UPDATE student SET Student_Password = '"+newUserPass+"', Full_name = '"+newFullName+"', Class = '"+newClass+"', Phone_number = '"+newPhone+"' WHERE ID = '"+newUserID+"'";
             JOptionPane.showMessageDialog(null,"Updated successfully");
             
-                stm.executeUpdate(sql);
+            stm.executeUpdate(sql);
             
         }catch(HeadlessException | SQLException e){
             JOptionPane.showMessageDialog(null,e);
@@ -364,22 +326,6 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
     private void user_ClassMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_ClassMouseClicked
 
     }//GEN-LAST:event_user_ClassMouseClicked
-
-    private void user_Department1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_Department1MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_user_Department1MouseClicked
-
-    private void user_Department1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_Department1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_user_Department1ActionPerformed
-
-    private void user_Department2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_user_Department2MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_user_Department2MouseClicked
-
-    private void user_Department2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_user_Department2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_user_Department2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -435,8 +381,6 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
     private javax.swing.JButton back_Button;
     private javax.swing.JButton delete_Button;
     private javax.swing.JLabel departLabel;
-    private javax.swing.JLabel departLabel1;
-    private javax.swing.JLabel departLabel2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
@@ -448,8 +392,6 @@ public class Admin_Edit_Student extends javax.swing.JFrame {
     private javax.swing.JButton search_Button;
     private javax.swing.JButton update_Button;
     private javax.swing.JTextField user_Class;
-    private javax.swing.JTextField user_Department1;
-    private javax.swing.JTextField user_Department2;
     private javax.swing.JTextField user_Fullname;
     private javax.swing.JTextField user_ID;
     private javax.swing.JTextField user_Password;

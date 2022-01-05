@@ -43,7 +43,7 @@ public class Admin_Login extends javax.swing.JFrame {
         setMinimumSize(new java.awt.Dimension(600, 400));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(185, 215, 240));
+        jPanel1.setBackground(new java.awt.Color(115, 136, 193));
 
         jLabel1.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 48)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(240, 240, 240));
